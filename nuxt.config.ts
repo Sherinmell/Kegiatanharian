@@ -20,6 +20,11 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
+  nitro: {
+    externals: {
+      inline: ['vue-router', 'pinia', '@vue/devtools-api'],
+    },
+  },
   app: {
     head: {
       title: 'HarianKu — Asisten Gaya Hidup & Rumah Tangga',
