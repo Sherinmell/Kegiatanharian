@@ -22,8 +22,14 @@ export default defineNuxtConfig({
   },
   nitro: {
     externals: {
-      inline: ['vue-router', 'pinia', '@vue/devtools-api'],
+      inline: ['vue-router', 'pinia', '@vue/devtools-api', 'hookable', 'unhead', 'lucide-vue-next'],
     },
+  },
+  routeRules: {
+    '/': { prerender: true },
+    '/menu': { prerender: true },
+    '/tugas': { prerender: true },
+    '/jajan': { prerender: true },
   },
   app: {
     head: {
